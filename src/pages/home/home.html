@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-fab top right edge>
+    <button ion-fab mini><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list>
+      <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-item>
+    <ion-label>Start Time</ion-label>
+    <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
+  </ion-item>
+
+  <button ion-button block icon-left large (click)="openMenu()">
+    <ion-icon name="home"></ion-icon>
+    Show Action Sheet
+  </button>
+
+  <button ion-button block round color="dark" (click)="doAlert()">
+    Show Basic Alert
+  </button>
+
+  <button ion-button color="secondary" block clear [full]="false" (click)="doPrompt()">
+    Show Prompt Alert
+  </button>
+
+  <button ion-button color="danger" block outline (click)="doConfirm()">
+    Show Confirm Alert
+  </button>
+
+  <ion-item>
+    <button ion-button item-right (click)="doRadio()">
+      Show Radio Alert
+    </button>
+  </ion-item>
+
+  <button ion-button small (click)="doCheckbox()">
+    Show Checkbox Alert
+  </button>
+
+  <button ion-button icon-only small color="secondary">
+    <ion-icon name="home"></ion-icon>
+  </button>
+</ion-content>
